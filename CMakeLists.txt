@@ -20,9 +20,9 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 add_library(${CMAKE_PROJECT_NAME}_lib box_capacity.cpp)
-add_executable(${CMAKE_PROJECT_NAME}_exe main.cpp)
+add_executable(${CMAKE_PROJECT_NAME} main.cpp)
 
-target_link_libraries(${CMAKE_PROJECT_NAME}_exe PRIVATE ${CMAKE_PROJECT_NAME}_lib)
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_PROJECT_NAME}_lib)
 
 #Добавление тестов
 enable_testing()
